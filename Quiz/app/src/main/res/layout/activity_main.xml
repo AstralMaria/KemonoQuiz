@@ -21,6 +21,7 @@
                     android:inputType= "textCapWords"
                     />
 
+
                 <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -28,13 +29,11 @@
                         <RadioButton android:id="@+id/radioMr"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mr. "
-                            android:onClick="onRadioButtonClicked"/>
+                            android:text="Mr. " />
                         <RadioButton android:id="@+id/radioMs"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ms. "
-                            android:onClick="onRadioButtonClicked"/>
+                            android:text="Ms. "/>
                 </RadioGroup>
                 <TextView
                     android:layout_width="wrap_content"
@@ -125,7 +124,7 @@
                     android:id="@+id/c4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ezo fox" />
+                    android:text="Ezo red fox" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

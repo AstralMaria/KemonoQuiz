@@ -83,33 +83,29 @@ public class MainActivity extends AppCompatActivity {
         }
         //To add more Checkboxes you can copy the above blocks of code and link new id's of new checkboxes
         //Then just sum them up in the score argument below
+        //Radio Buttons Logic
 
         TextView scoreOutput = findViewById(R.id.scoreTextView);
         String messageScore = createScoreSummary(question1 + question2 + question3 + question4, scoreOutput);
 
     }
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
 
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radioMr:
-                if (checked)
 
-                    break;
-            case R.id.radioMs:
-                if (checked)
 
-                    break;
-        }
-    }
     private String createScoreSummary (int Score, TextView txt) {
         EditText nameField = (EditText) findViewById(R.id.name_field);
         String name = nameField.getText().toString();
 
+        RadioButton rB1 = findViewById(R.id.radioMr);
+        RadioButton rB2 = findViewById(R.id.radioMs);
 
+        if (rB1.isChecked()) {
+            name = "Mr. " + name;
+        }
+        if (rB2.isChecked()){
+            name = "Ms. " + name;
+        }
 
         String goodJob = getString(R.string.goodJob);
         String scoreMessage = "\n" + getString(R.string.scoreMessage) + ": " + String.valueOf(Score)
