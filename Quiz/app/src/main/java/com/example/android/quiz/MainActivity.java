@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Question 1's Logic
         int question1 = 0;
-        CheckBox a1 = (CheckBox) findViewById(R.id.a1);
-        CheckBox b1 = (CheckBox) findViewById(R.id.b1);
-        CheckBox c1 = (CheckBox) findViewById(R.id.c1);
+        CheckBox a1 = findViewById(R.id.a1);
+        CheckBox b1 = findViewById(R.id.b1);
+        CheckBox c1 = findViewById(R.id.c1);
 
         if (b1.isChecked() && !a1.isChecked() && !c1.isChecked()) {
             question1 ++;
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Question 2's Logic
         int question2 = 0;
-        CheckBox a2 = (CheckBox) findViewById(R.id.a2);
-        CheckBox b2 = (CheckBox) findViewById(R.id.b2);
-        CheckBox c2 = (CheckBox) findViewById(R.id.c2);
+        CheckBox a2 = findViewById(R.id.a2);
+        CheckBox b2 = findViewById(R.id.b2);
+        CheckBox c2 = findViewById(R.id.c2);
 
         if (a2.isChecked() && !b2.isChecked() && !c2.isChecked()) {
             question2 ++;
@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Question 3's Logic
         int question3 = 0;
-        CheckBox a3 = (CheckBox) findViewById(R.id.a3);
-        CheckBox b3 = (CheckBox) findViewById(R.id.b3);
-        CheckBox c3 = (CheckBox) findViewById(R.id.c3);
+        CheckBox a3 = findViewById(R.id.a3);
+        CheckBox b3 = findViewById(R.id.b3);
+        CheckBox c3 = findViewById(R.id.c3);
 
         if (a3.isChecked() && !b3.isChecked() && !c3.isChecked()) {
             question3 ++;
@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
         }
 //Question 4's Logic
         int question4 = 0;
-        CheckBox a4 = (CheckBox) findViewById(R.id.a4);
-        CheckBox b4 = (CheckBox) findViewById(R.id.b4);
-        CheckBox c4 = (CheckBox) findViewById(R.id.c4);
+        CheckBox a4 = findViewById(R.id.a4);
+        CheckBox b4 = findViewById(R.id.b4);
+        CheckBox c4 = findViewById(R.id.c4);
 
         if (!a4.isChecked() && !b4.isChecked() && c4.isChecked()) {
             question4 ++;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private String createScoreSummary (int Score, TextView txt) {
-        EditText nameField = (EditText) findViewById(R.id.name_field);
+        EditText nameField = findViewById(R.id.name_field);
         String name = nameField.getText().toString();
 
         RadioButton rB1 = findViewById(R.id.radioMr);

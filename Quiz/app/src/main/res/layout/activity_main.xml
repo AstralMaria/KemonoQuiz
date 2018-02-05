@@ -4,138 +4,314 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             tools:context="com.android.example.justjava.MainActivity">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/Title"
+    android:textColor="#000000"
+    android:fontFamily="sans-serif-smallcaps"
+    android:textSize="24sp"/>
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <RadioButton
+                        android:id="@+id/radioMr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_weight="0.85"
+                        android:text="@string/Mr"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioMs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/radioMr"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="@string/Ms"
+                        android:textSize="24sp"
+                        android:textColor="#000000"/>
+                </RadioGroup>
+            </RelativeLayout>
                 <EditText
 
                     android:id="@+id/name_field"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint=  "Name"
+                    android:textColorHint="#9E9E9E"
                     android:inputType= "textCapWords"
                     />
 
 
-                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                        <RadioButton android:id="@+id/radioMr"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mr. " />
-                        <RadioButton android:id="@+id/radioMs"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Ms. "/>
-                </RadioGroup>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Which Friend is best at jumping?"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/JumpQ"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                 <CheckBox
                     android:id="@+id/a1"
+                    android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fennec"
+                    android:text="@string/Fennec"
                     />
+
+                <ImageView
+                    android:id="@+id/fennecImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/a1"
+                    android:layout_toStartOf="@+id/a1"
+                    android:src="@drawable/fennec" />
                 <CheckBox
                     android:id="@+id/b1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/a1"
+                    android:layout_marginTop="30dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Serval"
+                    android:text="@string/Serval"
                     />
+                        <ImageView
+                            android:id="@+id/servalImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_toLeftOf="@+id/b1"
+                            android:layout_below="@id/fennecImage"
+                            android:src="@drawable/saabaru"/>
                 <CheckBox
+                    android:layout_below="@+id/b1"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/c1"
+                    android:layout_marginTop="30dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kaban"
+                    android:text="@string/Kaban"
                     />
+                        <ImageView
+                            android:id="@+id/kabanImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_toLeftOf="@+id/b1"
+                            android:layout_below="@id/servalImage"
+                            android:src="@drawable/bag"/>
 
+                </RelativeLayout>
 
                 <TextView
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:textSize="22sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Which Friend is best at washing?"/>
+                    android:text="@string/WashQ"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
                 <CheckBox
                     android:id="@+id/a2"
+                    android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Arai-san"
+                    android:text="@string/Arai"
                     />
+                        <ImageView
+                            android:id="@+id/raccoonImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_toLeftOf="@+id/a2"
+                            android:src="@drawable/araisan"/>
                 <CheckBox
+                    android:layout_below="@+id/a2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
                     android:id="@+id/b2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Moose"
+                    android:text="@string/Moose"
                     />
+                        <ImageView
+                            android:id="@+id/mooseImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/raccoonImage"
+                            android:layout_toLeftOf="@+id/b2"
+                            android:src="@drawable/herajika"/>
                 <CheckBox
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/b2"
                     android:id="@+id/c2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bear"
+                    android:text="@string/Bear"
                     />
-
+                        <ImageView
+                            android:id="@+id/bearImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/mooseImage"
+                            android:layout_toLeftOf="@+id/c2"
+                            android:src="@drawable/brownbear"/>
+                </RelativeLayout>
                 <TextView
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Which Friend is the wisest?"/>
-                <CheckBox
-                    android:id="@+id/a3"
+                    android:text="@string/WiseQ"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                        <CheckBox android:id="@+id/a3"
+                            android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Owl"
+                    android:text="@string/Owl"
                     />
+                        <ImageView
+                            android:id="@+id/owlImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_toLeftOf="@+id/a3"
+                            android:src="@drawable/auruu"/>
                 <CheckBox
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
                     android:id="@+id/b3"
+                    android:layout_below="@+id/a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Otter"
+                    android:text="@string/Otter"
                     />
+                        <ImageView
+                            android:id="@+id/otterImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_toLeftOf="@+id/b3"
+                            android:layout_below="@id/owlImage"
+                            android:src="@drawable/kotsumekawauso"/>
                 <CheckBox
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
                     android:id="@+id/c3"
+                    android:layout_below="@+id/b3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jaguar" />
+                    android:text="@string/Jaguar" />
+                        <ImageView
+                            android:id="@+id/jaguarImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_toLeftOf="@+id/c3"
+                            android:layout_below="@id/otterImage"
+                            android:src="@drawable/jagaa"/>
+                </RelativeLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="22sp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Which Friend is the best at video games?"/>
+                    android:text="@string/GameQ"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <CheckBox
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Giraffe"
+                    android:text="@string/Giraffe"
                     />
+                <ImageView
+                    android:id="@+id/giraffeImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/a4"
+                    android:src="@drawable/reticulatedgiraffe"/>
+
                 <CheckBox
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/b4"
+                    android:layout_below="@+id/a4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wolf"
+                    android:text="@string/Wolf"
                     />
+                <ImageView
+                    android:id="@+id/wolfImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/b4"
+                    android:layout_below="@id/giraffeImage"
+                    android:src="@drawable/wurufu"/>
                 <CheckBox
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
                     android:id="@+id/c4"
+                    android:layout_below="@+id/b4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ezo red fox" />
+                    android:text="@string/Ezo" />
+                <ImageView
+                    android:id="@+id/foxImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/b4"
+                    android:layout_below="@id/wolfImage"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/fox"/>
+            </RelativeLayout>
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Submit"
+                    android:text="@string/Submit"
                     android:onClick="calculateScore"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your score: "
+                    android:text="@string/YourScore"
                     android:id="@+id/scoreTextView"/>
         </LinearLayout>
-
 </ScrollView>

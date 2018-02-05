@@ -1,6 +1,27 @@
 <resources>
-    <string name= "app_name">Quiz</string>
+    <string name= "app_name">KemonoQuiz</string>
     <string name= "goodJob">Good job</string>
     <string name= "happy">Happy happy</string>
 <string name="scoreMessage">Your score </string>
+    <string name="Title">Title: </string>
+    <string name="Ms">Ms. </string>
+    <string name="Mr">Mr. </string>
+    <string name="JumpQ">Which Friend is the best at jumping?</string>
+    <string name="Fennec">Fennec</string>
+    <string name="Serval">Serval</string>
+    <string name="Kaban">Kaban</string>
+    <string name="WashQ">Which Friend is the best at washing?</string>
+    <string name="Arai">Arai-san</string>
+    <string name="Moose">Moose</string>
+    <string name="Bear">Bear</string>
+    <string name="WiseQ">Which Friend is the wisest?</string>
+    <string name="Owl">Owl</string>
+    <string name="Otter">Otter</string>
+    <string name="Jaguar">Jaguar</string>
+    <string name="GameQ">Which Friend is the best gamer?</string>
+    <string name="Giraffe">Giraffe</string>
+    <string name="Wolf">Wolf</string>
+    <string name="Ezo">Ezo red fox</string>
+    <string name="Submit">Submit</string>
+    <string name="YourScore">Your score: </string>
 </resources>
