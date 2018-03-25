@@ -24,4 +24,6 @@
     <string name="Ezo">Ezo red fox</string>
     <string name="Submit">Submit</string>
     <string name="YourScore">Your score: </string>
+    <string name = "hint">Name</string>
+    <string name="greatjob">Great job!</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.android.quiz;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,15 +21,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void calculateScore(View view) {
 
-
-        //There's no need to assign new Booleans to the states of the checkboxes;
-        //We can use them as arguments for if statements, since their datatype defaults to bool
-
         //Question 1's Logic
         int question1 = 0;
-        CheckBox a1 = findViewById(R.id.a1);
-        CheckBox b1 = findViewById(R.id.b1);
-        CheckBox c1 = findViewById(R.id.c1);
+        RadioButton a1 = findViewById(R.id.a1);
+        RadioButton b1 = findViewById(R.id.b1);
+        RadioButton c1 = findViewById(R.id.c1);
 
         if (b1.isChecked() && !a1.isChecked() && !c1.isChecked()) {
             question1 ++;
@@ -40,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Question 2's Logic
         int question2 = 0;
-        CheckBox a2 = findViewById(R.id.a2);
-        CheckBox b2 = findViewById(R.id.b2);
-        CheckBox c2 = findViewById(R.id.c2);
+        RadioButton a2 = findViewById(R.id.a2);
+        RadioButton b2 = findViewById(R.id.b2);
+        RadioButton c2 = findViewById(R.id.c2);
 
         if (a2.isChecked() && !b2.isChecked() && !c2.isChecked()) {
             question2 ++;
@@ -55,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Question 3's Logic
         int question3 = 0;
-        CheckBox a3 = findViewById(R.id.a3);
-        CheckBox b3 = findViewById(R.id.b3);
-        CheckBox c3 = findViewById(R.id.c3);
+        RadioButton a3 = findViewById(R.id.a3);
+        RadioButton b3 = findViewById(R.id.b3);
+        RadioButton c3 = findViewById(R.id.c3);
 
         if (a3.isChecked() && !b3.isChecked() && !c3.isChecked()) {
             question3 ++;
@@ -69,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
         }
 //Question 4's Logic
         int question4 = 0;
-        CheckBox a4 = findViewById(R.id.a4);
-        CheckBox b4 = findViewById(R.id.b4);
-        CheckBox c4 = findViewById(R.id.c4);
+        RadioButton a4 = findViewById(R.id.a4);
+        RadioButton b4 = findViewById(R.id.b4);
+        RadioButton c4 = findViewById(R.id.c4);
 
         if (!a4.isChecked() && !b4.isChecked() && c4.isChecked()) {
             question4 ++;
@@ -81,9 +79,6 @@ public class MainActivity extends AppCompatActivity {
                 question4--;
             }
         }
-        //To add more Checkboxes you can copy the above blocks of code and link new id's of new checkboxes
-        //Then just sum them up in the score argument below
-        //Radio Buttons Logic
 
         TextView scoreOutput = findViewById(R.id.scoreTextView);
         String messageScore = createScoreSummary(question1 + question2 + question3 + question4, scoreOutput);
@@ -94,16 +89,25 @@ public class MainActivity extends AppCompatActivity {
 
 
     private String createScoreSummary (int Score, TextView txt) {
+
+        Context context = getApplicationContext();
+        CharSequence text = getString(R.string.greatjob);
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+
         EditText nameField = findViewById(R.id.name_field);
         String name = nameField.getText().toString();
 
-        RadioButton rB1 = findViewById(R.id.radioMr);
-        RadioButton rB2 = findViewById(R.id.radioMs);
+        CheckBox CB1 = findViewById(R.id.checkMr);
+        CheckBox CB2 = findViewById(R.id.checkMs);
 
-        if (rB1.isChecked()) {
+        if (CB1.isChecked()) {
             name = "Mr. " + name;
         }
-        if (rB2.isChecked()){
+        if (CB2.isChecked()){
             name = "Ms. " + name;
         }
 
