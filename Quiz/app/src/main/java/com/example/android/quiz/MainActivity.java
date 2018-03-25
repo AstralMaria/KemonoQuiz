@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         String messageScore = createScoreSummary(question1 + question2 + question3 + question4, scoreOutput);
 
     }
-
+// https://github.com/Kezzsim many thanks to my friend Kezz for assisting with the score addition logic!
 
 
 
