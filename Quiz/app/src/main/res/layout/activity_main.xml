@@ -71,57 +71,18 @@
 
 
 
-                <RadioButton
-                    android:id="@+id/a1"
-                    android:layout_centerHorizontal="true"
-                    android:layout_width="wrap_content"
+                <EditText
+
+                    android:id="@+id/q1_field"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/Fennec"
+                    android:hint=  "@string/answer"
+                    android:textColorHint="#9E9E9E"
+                    android:inputType= "textCapWords"
                     />
 
-                <ImageView
-                    android:id="@+id/fennecImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_toLeftOf="@+id/a1"
-                    android:layout_toStartOf="@+id/a1"
-                    android:src="@drawable/fennec" />
-                <RadioButton
-                    android:id="@+id/b1"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@+id/a1"
-                    android:layout_marginTop="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Serval"
-                    />
-                        <ImageView
-                            android:id="@+id/servalImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toLeftOf="@+id/b1"
-                            android:layout_below="@id/fennecImage"
-                            android:src="@drawable/saabaru"/>
-                <RadioButton
-                    android:layout_below="@+id/b1"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/c1"
-                    android:layout_marginTop="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Kaban"
-                    />
 
-                        <ImageView
-                            android:id="@+id/kabanImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toLeftOf="@+id/b1"
-                            android:layout_below="@id/servalImage"
-                            android:src="@drawable/bag"/>
-
-                </RelativeLayout>
+            </RelativeLayout>
 
                 <TextView
                     android:textColor="#000000"
@@ -248,11 +209,11 @@
                     android:layout_marginLeft="24dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/GameQ"/>
+                    android:text="@string/CanineQ"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <RadioButton
+                <CheckBox
                     android:layout_centerHorizontal="true"
                     android:id="@+id/a4"
                     android:layout_width="wrap_content"
@@ -266,7 +227,7 @@
                     android:layout_toLeftOf="@+id/a4"
                     android:src="@drawable/reticulatedgiraffe"/>
 
-                <RadioButton
+                <CheckBox
                     android:layout_marginTop="30dp"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/b4"
@@ -282,7 +243,7 @@
                     android:layout_toLeftOf="@+id/b4"
                     android:layout_below="@id/giraffeImage"
                     android:src="@drawable/wurufu"/>
-                <RadioButton
+                <CheckBox
                     android:layout_marginTop="30dp"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/c4"

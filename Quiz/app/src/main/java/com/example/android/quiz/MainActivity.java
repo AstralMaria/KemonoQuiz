@@ -23,11 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
         //Question 1's Logic
         int question1 = 0;
-        RadioButton a1 = findViewById(R.id.a1);
-        RadioButton b1 = findViewById(R.id.b1);
-        RadioButton c1 = findViewById(R.id.c1);
+        EditText answerField = findViewById(R.id.q1_field);
+        String answer = answerField.getText().toString();
 
-        if (b1.isChecked() && !a1.isChecked() && !c1.isChecked()) {
+        if (answer.matches("Serval")) {
             question1 ++;
         }
         else {
@@ -67,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
         }
 //Question 4's Logic
         int question4 = 0;
-        RadioButton a4 = findViewById(R.id.a4);
-        RadioButton b4 = findViewById(R.id.b4);
-        RadioButton c4 = findViewById(R.id.c4);
+        CheckBox a4 = findViewById(R.id.a4);
+        CheckBox b4 = findViewById(R.id.b4);
+        CheckBox c4 = findViewById(R.id.c4);
 
-        if (!a4.isChecked() && !b4.isChecked() && c4.isChecked()) {
+        if (!a4.isChecked() && b4.isChecked() && c4.isChecked()) {
             question4 ++;
         }
         else {

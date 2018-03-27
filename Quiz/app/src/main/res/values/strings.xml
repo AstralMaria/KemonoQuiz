@@ -18,7 +18,7 @@
     <string name="Owl">Owl</string>
     <string name="Otter">Otter</string>
     <string name="Jaguar">Jaguar</string>
-    <string name="GameQ">Which Friend is the best gamer?</string>
+    <string name="CanineQ">Which Friends are both canines?</string>
     <string name="Giraffe">Giraffe</string>
     <string name="Wolf">Wolf</string>
     <string name="Ezo">Ezo red fox</string>
@@ -26,4 +26,5 @@
     <string name="YourScore">Your score: </string>
     <string name = "hint">Name</string>
     <string name="greatjob">Great job!</string>
+    <string name="answer">Answer:</string>
 </resources>
