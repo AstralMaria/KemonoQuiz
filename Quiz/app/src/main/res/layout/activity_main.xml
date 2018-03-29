@@ -1,278 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".MainActivity"
-    >
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.android.example.justjava.MainActivity">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:context="com.android.example.justjava.MainActivity">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/Title"
-    android:textColor="#000000"
-    android:fontFamily="sans-serif-smallcaps"
-    android:textSize="24sp"/>
-
-                    <CheckBox
-                        android:id="@+id/checkMr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginRight="24dp"
-                        android:text="@string/Mr"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:textColor="#000000"
-                        android:textSize="24sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkMs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/checkMr"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:text="@string/Ms"
-                        android:textSize="24sp"
-                        android:textColor="#000000"/>
-
-            </RelativeLayout>
-                <EditText
-
-                    android:id="@+id/name_field"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint=  "@string/hint"
-                    android:textColorHint="#9E9E9E"
-                    android:inputType= "textCapWords"
-                    />
-
-
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/JumpQ"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/Title"
                 android:textColor="#000000"
-                android:textSize="22sp" />
+                android:textSize="24sp" />
 
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/checkMr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/Mr"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/checkMs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/checkMr"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/Ms"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <EditText
+
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint"
+            android:inputType="textCapWords"
+            android:textColorHint="#9E9E9E" />
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/JumpQ"
+            android:textColor="#000000"
+            android:textSize="22sp" />
 
-                <EditText
-
-                    android:id="@+id/q1_field"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint=  "@string/answer"
-                    android:textColorHint="#9E9E9E"
-                    android:inputType= "textCapWords"
-                    />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-            </RelativeLayout>
+            <EditText
 
-                <TextView
-                    android:textColor="#000000"
-                    android:layout_gravity="center"
-                    android:textSize="22sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/WashQ"/>
+                android:id="@+id/q1_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/answer"
+                android:inputType="textCapWords"
+                android:textColorHint="#9E9E9E" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/WashQ"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/a2"
-                    android:layout_centerHorizontal="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Arai"
-                    />
-                        <ImageView
-                            android:id="@+id/raccoonImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toLeftOf="@+id/a2"
-                            android:src="@drawable/araisan"/>
-                <RadioButton
-                    android:layout_below="@+id/a2"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
+                    android:text="@string/Arai" />
+
+                <ImageView
+                    android:id="@+id/raccoonImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/a2"
+                    android:src="@drawable/araisan" />
+
+                <RadioButton
                     android:id="@+id/b2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Moose"
-                    />
-                        <ImageView
-                            android:id="@+id/mooseImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_below="@+id/raccoonImage"
-                            android:layout_toLeftOf="@+id/b2"
-                            android:src="@drawable/herajika"/>
-                <RadioButton
-                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/a2"
                     android:layout_centerHorizontal="true"
-                    android:layout_below="@id/b2"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/Moose" />
+
+                <ImageView
+                    android:id="@+id/mooseImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/raccoonImage"
+                    android:layout_toLeftOf="@+id/b2"
+                    android:src="@drawable/herajika" />
+
+                <RadioButton
                     android:id="@+id/c2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Bear"
-                    />
-                        <ImageView
-                            android:id="@+id/bearImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_below="@id/mooseImage"
-                            android:layout_toLeftOf="@+id/c2"
-                            android:src="@drawable/brownbear"/>
-                </RelativeLayout>
-                <TextView
-                    android:textColor="#000000"
-                    android:textSize="22sp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/WiseQ"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-
-                        <RadioButton android:id="@+id/a3"
-                            android:layout_centerHorizontal="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Owl"
-                    />
-                        <ImageView
-                            android:id="@+id/owlImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toLeftOf="@+id/a3"
-                            android:src="@drawable/auruu"/>
-                <RadioButton
+                    android:layout_below="@id/b2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
-                    android:id="@+id/b3"
-                    android:layout_below="@+id/a3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Otter"
-                    />
-                        <ImageView
-                            android:id="@+id/otterImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toLeftOf="@+id/b3"
-                            android:layout_below="@id/owlImage"
-                            android:src="@drawable/kotsumekawauso"/>
-                <RadioButton
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
-                    android:id="@+id/c3"
-                    android:layout_below="@+id/b3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Jaguar" />
-                        <ImageView
-                            android:id="@+id/jaguarImage"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toLeftOf="@+id/c3"
-                            android:layout_below="@id/otterImage"
-                            android:src="@drawable/jagaa"/>
-                </RelativeLayout>
+                    android:text="@string/Bear" />
 
-                <TextView
-                    android:textColor="#000000"
-                    android:layout_centerHorizontal="true"
-                    android:textSize="22sp"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="24dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/CanineQ"/>
-            <RelativeLayout
+                <ImageView
+                    android:id="@+id/bearImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/mooseImage"
+                    android:layout_toLeftOf="@+id/c2"
+                    android:src="@drawable/brownbear" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/WiseQ"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <CheckBox
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/a4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Giraffe"
-                    />
-                <ImageView
-                    android:id="@+id/giraffeImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_toLeftOf="@+id/a4"
-                    android:src="@drawable/reticulatedgiraffe"/>
+                android:layout_height="match_parent">
 
-                <CheckBox
-                    android:layout_marginTop="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:id="@+id/b4"
-                    android:layout_below="@+id/a4"
+                <RadioButton
+                    android:id="@+id/a3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Wolf"
-                    />
-                <ImageView
-                    android:id="@+id/wolfImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_toLeftOf="@+id/b4"
-                    android:layout_below="@id/giraffeImage"
-                    android:src="@drawable/wurufu"/>
-                <CheckBox
-                    android:layout_marginTop="30dp"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/c4"
-                    android:layout_below="@+id/b4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Ezo" />
-                <ImageView
-                    android:id="@+id/foxImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_toLeftOf="@+id/b4"
-                    android:layout_below="@id/wolfImage"
-                    android:layout_marginRight="16dp"
-                    android:src="@drawable/fox"/>
-            </RelativeLayout>
-                <Button
-                    android:layout_marginTop="40dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Submit"
-                    android:onClick="calculateScore"/>
+                    android:text="@string/Owl" />
 
-                <TextView
+                <ImageView
+                    android:id="@+id/owlImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/a3"
+                    android:src="@drawable/auruu" />
+
+                <RadioButton
+                    android:id="@+id/b3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/YourScore"
-                    android:textSize="24sp"
-                    android:textColor="#000000"
-                    android:id="@+id/scoreTextView"/>
-        </LinearLayout>
+                    android:layout_below="@+id/a3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/Otter" />
+
+                <ImageView
+                    android:id="@+id/otterImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/owlImage"
+                    android:layout_toLeftOf="@+id/b3"
+                    android:src="@drawable/kotsumekawauso" />
+
+                <RadioButton
+                    android:id="@+id/c3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/b3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/Jaguar" />
+
+                <ImageView
+                    android:id="@+id/jaguarImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/otterImage"
+                    android:layout_toLeftOf="@+id/c3"
+                    android:src="@drawable/jagaa" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:text="@string/CanineQ"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Giraffe" />
+
+            <ImageView
+                android:id="@+id/giraffeImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@+id/a4"
+                android:src="@drawable/reticulatedgiraffe" />
+
+            <CheckBox
+                android:id="@+id/b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/a4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/Wolf" />
+
+            <ImageView
+                android:id="@+id/wolfImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/giraffeImage"
+                android:layout_toLeftOf="@+id/b4"
+                android:src="@drawable/wurufu" />
+
+            <CheckBox
+                android:id="@+id/c4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/b4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/Ezo" />
+
+            <ImageView
+                android:id="@+id/foxImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/wolfImage"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/b4"
+                android:src="@drawable/fox" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:onClick="calculateScore"
+            android:text="@string/Submit" />
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/YourScore"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+    </LinearLayout>
 </ScrollView>
